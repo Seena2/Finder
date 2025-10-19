@@ -1,15 +1,101 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
+  /* 
+  /*black and white theme
   @apply bg-white dark:bg-gray-950;
 
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
-  }
+  } */
+}
+
+/*==Navbar==*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #f8f9fa;
+  color: #151618;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #08ad2c;
+}
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+a:hover {
+  color: #1362ca;
+}
+
+/* ===Home Page === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.container.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #4a5568;
+}
+.container.hero img {
+  max-width: 100%;
+  height: auto;
+}
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+.btn-primary {
+  background-color: #08ad2c;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background-color: #05851b;
+  color: #fff;
+}
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #151618;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-secondary:hover {
+  background-color: #cbd5e1;
 }
